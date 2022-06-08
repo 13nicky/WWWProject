@@ -1,0 +1,410 @@
+:root
+{
+    --BgColorDefault: rgb(63, 56, 56);
+    --InputColorDefault:rgb(173, 173, 173);
+    --FontColorHover: rgb(0, 110, 255);
+    --FontColorDefault: #dacfcf;
+    --ButtonColorDefault: rgb(29, 141, 149);
+    --ButtonColorHover: rgb(114, 71, 71);
+    --BorderDefault: .2rem solid rgb(139, 139, 137);
+    --BorderSmall: 2px solid black;
+    --BorderHover: .2rem solid rgb(100, 173, 16);
+    --BackgroundHover: rgba(19, 139, 79, 0.589);
+    --Hyperlink: rgb(24, 143, 212);
+    --HyperlinkHover: rgb(31, 105, 16);
+}
+body
+{
+    background-color: var(--BgColorDefault);
+    color:white;
+}
+.register_form
+{
+    display:none;
+    z-index: 1;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.411);
+    top:0;
+    left:0;
+}
+.register_form_window
+{
+    border:var(--BorderSmall);
+    padding:1rem;
+    text-align: center;
+    margin-left:auto;
+    margin-right: auto;
+    width:15rem;
+    margin-top:15%;
+    background: var(--BgColorDefault);
+}
+.register_form_window input
+{
+    margin-bottom: .4rem;
+}
+.close_button
+{
+    transition: .2s;
+    cursor: pointer;
+    float:right;
+    font-size: 2rem;
+}
+.close_button:hover
+{
+    transition: .2s;
+    color:var(--FontColorHover);
+}
+.register_button
+{
+    cursor: pointer;
+    transition: .2s;
+    color:#0d6efd;
+}
+.register_button:hover
+{
+    transition: .2s;
+    color:var(--HyperlinkHover);
+}
+.banner
+{
+    position:relative;
+    max-height: 250px;
+    margin-top:1.75rem;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 2rem;
+}
+.banner_logo
+{
+    display:block;
+    width: 12.5rem;
+    max-width: 250px;
+}
+.banner_text
+{
+    margin-top:1.25rem;
+    overflow:hidden;
+    font-size: 4.2rem;
+}
+#container *
+{
+    animation-name: fadeIn;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+}
+.login_form th
+{
+    font-size: 3rem;
+}
+.header
+{
+    max-height: 20rem;
+    width:100%;
+}
+.header_upper
+{
+    font-size:1.3rem;
+}
+.motto
+{
+    float:left;
+    font-style:italic;
+    margin-left:7rem;
+}
+.social
+{
+    font-size:2rem;
+    margin-right:10rem;
+    float:right;
+}
+.social i
+{
+    transition: 1s;
+    margin-left:2rem;
+}
+.social i:hover
+{
+    transition: .3s;
+    color: var(--FontColorHover);
+}
+.nav tbody, .nav tbody tr, .nav tbody tr td
+{
+    width:100%;
+}
+.nav a, .nav a:hover
+{
+    transition: .3s;
+}
+.nav a
+{
+    display:block;
+    padding:.5rem;
+    text-align: center;
+    color: var(--FontColorDefault);
+    font-size: 1.5rem;
+    border: var(--BorderDefault);
+}
+.nav a:hover
+{
+    border: var(--BorderHover);
+    background-color: var(--BackgroundHover);
+}
+.content
+{
+    margin-top:2rem;
+    margin-bottom:2rem;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+}
+.content .equal_columns
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+}
+.footer
+{
+    width:100%;
+    border-top: var(--BorderDefault);
+}
+.footer_element
+{
+    margin-left:10%;
+    margin-top:1rem;
+}
+.footer .footer_logo
+{
+    float:left;
+    text-align: justify;
+    width:9.3rem;
+}
+.footer .links
+{
+    float:left;
+}
+.footer .links ul
+{
+    list-style-type: circle;
+}
+.footer .links ul li
+{
+    margin-bottom:.5rem;
+}
+.footer .links a, .footer .links a:hover
+{
+    transition: .3s;
+}
+.footer .links a
+{
+    color: var(--Hyperlink);
+}
+.footer .links a:hover
+{
+    color: var(--HyperlinkHover);
+}
+.footer .footer_text
+{
+    color:var(--FontColorDefault);
+    float: left;
+    width:30rem;
+    text-align: justify;
+}
+.login_form button
+{
+    transition: .5s;
+    width:10rem;
+    height: 2rem;
+    border:none;
+    background-color: var(--ButtonColorDefault);
+}
+.login_form button:hover
+{
+    transition: .5s;
+    color: white;
+    background-color: var(--ButtonColorHover);
+}
+.login_form input
+{
+    border:none;
+    width:100%;
+    height: 2.5rem;
+    font-size: 2rem;
+    background-color: var(--InputColorDefault);
+    margin-bottom:1rem;
+}
+.input_obj
+{
+    position: relative;
+}
+.input_icon
+{
+    position: absolute;
+    right:1%;
+    bottom:25%;
+    z-index: 1;
+    color:black;
+    font-size: 1.75rem;
+}
+a
+{
+    text-decoration: none;
+}
+hr
+{
+    color:rgb(55, 23, 56);
+}
+.blank-05
+{
+    margin:.5rem;
+}
+.clear
+{
+    clear: both;
+}
+.zone_select, .class
+{
+    cursor: pointer;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    text-align: center;
+    text-decoration: none;
+    padding: .4rem;
+    font-size:1.4rem;
+    color:white;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--BgColorDefault);
+    border:var(--BorderDefault);
+}
+.class
+{
+    border: var(--BorderSmall);
+    padding: .15rem;
+}
+.wide
+{
+    width:100%;
+}
+.zone_select:hover, .class:hover
+{
+    background-color: var(--BackgroundHover);
+}
+.zone_select > *, .class > *
+{
+    background-color: var(--BgColorDefault);
+}
+.form *
+{
+    border-radius: 1rem;
+    margin-bottom:.3rem;
+}
+.form img
+{
+    border-radius: 0%;
+}
+.form_input
+{
+    color:var(--FontColorDefault);
+    text-align: center;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    border: var(--BorderSmall);
+    background-color:var(--BgColorDefault);
+}
+.form_input::-webkit-outer-spin-button,
+.form_input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#add
+{
+    transition: .4s;
+    cursor: pointer;
+    float:right;
+    width:15%;
+    padding:.5rem;
+    margin-bottom:1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: rgb(170, 82, 0);
+}
+#add:hover
+{
+    transition: .4s;
+    background-color: rgb(143, 175, 0);
+}
+.session
+{
+    margin-bottom:1rem;
+}
+.session table td
+{
+    padding:.2rem;
+    border:var(--BorderSmall);
+    text-align: center;
+}
+.session table img, .session table a, .session table i
+{
+    border:none;
+}
+.session table i,.session table a
+{
+    font-size:2rem;
+}
+.session table a
+{
+    transition: .2s;
+    color: white;
+    cursor: pointer;
+}
+.session table a:hover
+{
+    transition: .2s;
+    color:var(--FontColorHover);
+}
+form button
+{
+    background-color: var(--BgColorDefault);
+    border: none;
+}
+.submit_button
+{
+    transition: .2s;
+    color:var(--FontColorDefault);
+    font-size: 2rem;
+}
+.submit_button:hover
+{
+    transition: .2s;
+    color:var(--FontColorHover);
+}
+.copyright
+{
+    text-align: right;
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    font-style: italic;
+    color:rgb(157, 157, 158);
+}
+.center
+{
+    margin-left:auto;
+    margin-right: auto;
+}
+.bot_marg
+{
+    margin-bottom: 2rem;
+}
+#class_icon
+{
+    width: 40px;
+}
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
