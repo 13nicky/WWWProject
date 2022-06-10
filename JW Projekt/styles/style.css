@@ -400,9 +400,10 @@ form button
 {
     margin-bottom: 2rem;
 }
-#class_icon
+.user_data_input
 {
-    width: 40px;
+    background-color: var(--BgColorDefault);
+    border: var(--BorderSmall);
 }
 @keyframes fadeIn {
     from {opacity: 0;}

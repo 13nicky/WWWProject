@@ -19,6 +19,7 @@
     <title>Temporary title</title>
 
     <script>
+
         function updateIcon()
         {
             let icon = document.getElementById("class_icon");
@@ -69,13 +70,14 @@
                 </tr>
                 <tr>
                     <td>E-Mail: </td>
-                    <td class="text-center"><?php echo $_SESSION['email'] ?></td>
-                    <td><a href="">zmień</a></td>
+                    <td class="text-center"><input class="form_input" name="nEmail" type="email" value='<?php echo $_SESSION['email'] ?>'></td>
                 </tr>
                 <tr>
                     <td>Hasło: </td>
-                    <td class="text-center">{password}</td>
-                    <td><a href="">zmień</a></td>
+                    <td class="text-center"><input class="form_input" name="nPassword" type="password" value='<?php echo $_SESSION['password'] ?>'></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-center"><a class="fa-solid fa-pen-clip submit_button"> Zapisz</a></td>
                 </tr>
             </table>
             <hr>
