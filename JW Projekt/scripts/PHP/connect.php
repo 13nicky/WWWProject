@@ -10,8 +10,6 @@
     if($connect -> connect_errno!=0)
     {
         echo "Connection error!<br>Error no. ".$connect->connect_errno;
-        sleep(3);
-        header('Location: additem.html');
     }
 
 ?>

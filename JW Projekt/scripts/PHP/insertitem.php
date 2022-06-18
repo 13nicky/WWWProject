@@ -1,7 +1,4 @@
-<html>
-    <body>
 <?php
-
     require_once 'connect.php';
 
     $itemname = $_GET['name'];
@@ -15,8 +12,5 @@
     {
         echo "Something went wrong!";
     }
-    $query->free_result();
     header('Location: additem.html');
 ?>
-    </body>
-</html>

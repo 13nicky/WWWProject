@@ -16,6 +16,8 @@
 
             $result = $query->fetch_assoc();
 
+            $_SESSION['isLoggedIn'] = true;
+
             $_SESSION['userid'] = $result['ID'];
             $_SESSION['username'] = $result['username'];
             $_SESSION['email'] = $result['email'];
@@ -29,10 +31,11 @@
 
             $query->free_result();
         }
-        header('Location: ../../main.html');
+        header('Location: ../../main.php');
     }
     else
     {
         echo "Something went wrong!";
+        header('Location: ../../main.php');
     }
 ?>

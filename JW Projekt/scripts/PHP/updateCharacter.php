@@ -2,6 +2,11 @@
 
 session_start();
 
+if((!isset($_SESSION['isLoggedIn'])) && (!$_SESSION['isLoggedIn']))
+    {
+    header('Location: index.php');
+    }
+
 require_once 'connect.php';
 
 $_SESSION['class'] = $class = $_REQUEST['class'];

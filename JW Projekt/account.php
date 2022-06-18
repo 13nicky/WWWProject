@@ -2,6 +2,12 @@
 
     session_start();
 
+
+    
+    if((!isset($_SESSION['isLoggedIn'])) && (!$_SESSION['isLoggedIn']))
+    {
+    header('Location: index.php');
+    }
 ?>
 
 <!doctype html>
@@ -16,6 +22,7 @@
     <link href="styles/style.css" rel="stylesheet">
     <!-- Other elements -->
     <script src="https://kit.fontawesome.com/afde58873f.js" crossorigin="anonymous"></script>
+    
     <title>Temporary title</title>
 
     <script>
@@ -49,20 +56,21 @@
         <div class="header">
             <div class="header_upper">
                 <div class="motto">Śledź z nami swój progres!</div>
-                <div class="social"><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-twitter"></i><i class="fa-solid fa-envelope"></i></div>
+                <div class="social"><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-twitter"></i><i class="fa-solid fa-envelope"></i><a href="scripts/PHP/logout.php" class="exit fa-solid fa-right-from-bracket"></a></div>
             </div>
             <div class="clear"></div>
             <table class="nav">
                 <tr class="d-flex justify-content-center">
-                    <td><a class="rounded" href="main.html">Strona Główna</a></td>
-                    <td><a class="rounded" href="sessions.html">Sesje</a></td>
-                    <td><a class="rounded" href="statistics.html">Statystyki</a></td>
+                    <td><a class="rounded" href="main.php">Strona Główna</a></td>
+                    <td><a class="rounded" href="sessions.php">Sesje</a></td>
+                    <td><a class="rounded" href="statistics.php">Statystyki</a></td>
                     <td><a class="rounded" href="#">Konto</a></td>
                 </tr>   
             </table>
         </div>
         <div class="content">
             <h1 class="text-center bot_marg"> Twoje Dane </h1>
+        <form action="scripts/PHP/updateData.php" method="post" class="form">
             <table class="center">
                 <tr>
                     <td>Login: </td>
@@ -70,16 +78,33 @@
                 </tr>
                 <tr>
                     <td>E-Mail: </td>
-                    <td class="text-center"><input class="form_input" name="nEmail" type="email" value='<?php echo $_SESSION['email'] ?>'></td>
+                    <td class="text-center"><input class="form_input" name="nEmail" type="email" value='<?php echo $_SESSION['email'] ?>' required></td>
                 </tr>
                 <tr>
                     <td>Hasło: </td>
-                    <td class="text-center"><input class="form_input" name="nPassword" type="password" value='<?php echo $_SESSION['password'] ?>'></td>
+                    <td class="text-center"><input class="form_input" name="nPassword" type="password" value='<?php echo $_SESSION['password'] ?>' required></td>
+                </tr>
+                <tr class="expand">
+                    <td colspan="2" class="text-center"><h4>Podaj aktualne hasło</h4></td>
+                </tr>
+                <tr class="expand">
+                    <td colspan="2" class="text-center"><input class="form_input" type="password" name="verify1" required></td>
+                </tr>
+                <tr class="expand">
+                    <td colspan="2" class="text-center"><h4>Powtórz aktualne hasło</h4></td>
+                </tr>
+                <tr class="expand">
+                    <td colspan="2" class="text-center"><input class="form_input" type="password" name="verify2" required></td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="text-center"><a class="fa-solid fa-pen-clip submit_button"> Zapisz</a></td>
+                    <td class="text-center" colspan="2">
+                        <button type="submit" onclick="Expand()">
+                            <i class="fa-solid fa-pen-clip submit_button"> Zapisz</i>
+                        </button>
+                    </td>
                 </tr>
             </table>
+        </form>
             <hr>
             <h1 class="text-center bot_marg"> Uzupełnij klasę </h1>
             <form action="scripts/PHP/updateCharacter.php" method="post" class="form">
@@ -179,6 +204,8 @@
     </div>
     <!--Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Other scripts -->
+    <script src="scripts/JavaScript/Change_data.js"></script>
   </body>
     
 </html>
