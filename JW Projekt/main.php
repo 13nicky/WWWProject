@@ -12,6 +12,7 @@ if((!isset($_SESSION['isLoggedIn'])) && (!$_SESSION['isLoggedIn']))
 <!doctype html>
 <html lang="pl">
   <head>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -86,12 +87,12 @@ if((!isset($_SESSION['isLoggedIn'])) && (!$_SESSION['isLoggedIn']))
                 </ul>
             </div>
             <div class="footer_text footer_element">
-                {NAZWA STRONY} jest stroną powstałą w celu śledzenia swoich wyników w grze Black Desert Online.
+                GRIND TRACKER jest stroną powstałą w celu śledzenia swoich wyników w grze Black Desert Online.
                 Pozwala ona na zapisywanie swoich sesji grindingowych oraz automatyczne obliczanie zarobionego w grze srebra.
                 Umożliwia ona również podejrzenie ogólnych statystyk z zapisanych sesji.
             </div>
             <div class="clear"></div>
-            <div class="copyright">{NAZWA STRONY}&COPY;Jakub Wójcicki. Wszystkie prawa zastrzeżone.</div>
+            <div class="copyright">GRIND TRACKER&COPY;Jakub Wójcicki. Wszystkie prawa zastrzeżone.</div>
         </div>
     </div>
     <!--Bootstrap Bundle with Popper -->

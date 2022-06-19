@@ -13,6 +13,7 @@ require_once 'scripts/PHP/connect.php';
 <!doctype html>
 <html lang="pl">
   <head>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,6 +48,9 @@ require_once 'scripts/PHP/connect.php';
                     isInput: 1
                 });
                 setTimeout(function(){updateIcons()},100);
+                    $('#sessions_zone').load("scripts/PHP/updateSessions.php",{
+                    zoneID: zoneId
+                    });
             });
         });
   </script>
@@ -109,6 +113,9 @@ require_once 'scripts/PHP/connect.php';
                         
                     </tr>
                 </table>
+                <table style="width:100%;" id="sessions_zone">
+
+                </table>
             </div>
         </div>
         <div class="footer">
@@ -132,12 +139,12 @@ require_once 'scripts/PHP/connect.php';
                 </ul>
             </div>
             <div class="footer_text footer_element">
-                {NAZWA STRONY} jest stroną powstałą w celu śledzenia swoich wyników w grze Black Desert Online.
+                GRIND TRACKER jest stroną powstałą w celu śledzenia swoich wyników w grze Black Desert Online.
                 Pozwala ona na zapisywanie swoich sesji grindingowych oraz automatyczne obliczanie zarobionego w grze srebra.
                 Umożliwia ona również podejrzenie ogólnych statystyk z zapisanych sesji.
             </div>
             <div class="clear"></div>
-            <div class="copyright">{NAZWA STRONY}&COPY;Jakub Wójcicki. Wszystkie prawa zastrzeżone.</div>
+            <div class="copyright">GRIND TRACKER&COPY;Jakub Wójcicki. Wszystkie prawa zastrzeżone.</div>
         </div>
     </div>
     <!--Bootstrap Bundle with Popper -->

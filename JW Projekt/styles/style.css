@@ -454,6 +454,13 @@ form button
     width:100%;
     border:none;
     background-color: var(--BgColorDefault);
+    
+}
+.fill_input::-webkit-outer-spin-button,
+.fill_input::-webkit-inner-spin-button {
+  margin: 0;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
 }
 .add_button
 {

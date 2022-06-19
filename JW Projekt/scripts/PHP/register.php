@@ -11,6 +11,7 @@
     if($query = @$connect -> query($query))
     {
         echo "Success!";
+        header('Location: ../../index.php');
     }
     else
     {

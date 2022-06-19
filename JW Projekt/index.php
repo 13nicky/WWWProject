@@ -13,6 +13,7 @@ if((isset($_SESSION['isLoggedIn'])) && ($_SESSION['isLoggedIn']))
 <!doctype html>
 <html lang="pl">
   <head>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,7 +45,7 @@ if((isset($_SESSION['isLoggedIn'])) && ($_SESSION['isLoggedIn']))
     <div id="container">
       <div class="banner d-flex justify-content-center">
         <img class="banner_logo p-2" src="images/250.png">
-        <div class="banner_text p-2">Lorem, ipsum dolor.</div>
+        <div class="banner_text p-2">GRIND TRACKER</div>
       </div>
       <table class="login_form d-flex justify-content-center text-center">
         <form method="post" action="scripts/PHP/login.php">

@@ -19,12 +19,12 @@ header('Location: index.php');
     {
         $result = $query -> fetch_assoc();
         $itemAmount = $result['itemAmount'];
-            if($isInput==1){echo "<td class='item'><input name='time' class='fill_input' value='0'></td>";}
+            if($isInput==1){echo "<td class='item'><input name='time' type='number' class='fill_input' value='0'></td>";}
             else {echo "<td class='item'><i class='fa-solid fa-clock'></i></td>";}
         for($i=0;$i<$itemAmount;$i++)
         {
             echo "<td class='item'>";
-            if($isInput==1){echo "<input id='item$i' name='$i' class='fill_input' value='0'>";}
+            if($isInput==1){echo "<input id='item$i' name='$i' type='number' class='fill_input' value='0'>";}
             else {echo "<img class='icon$i item_icon' src='images/region_icons/(".$i.").png'>";}
             echo "</td>";
         }
